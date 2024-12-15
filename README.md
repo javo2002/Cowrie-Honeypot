@@ -43,7 +43,7 @@ The goal of this project is to simulate vulnerable services using Cowrie to coll
 ## Logical Diagram
 Below is a link to the logical diagram of the project. The diagram illustrates the network topology, including the Cowrie honeypot within the DMZ.
 
-![Logical Diagram](./media/logical_d.png)
+![Logical Diagram](./media/logical_diagram.png)
 
 ## Usage
 - Monitor incoming traffic to the honeypot.
