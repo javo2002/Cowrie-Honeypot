@@ -14,7 +14,7 @@ The goal of this project is to simulate vulnerable services using Cowrie to coll
 ## Setup Instructions
 
 ### Prerequisites
-1. An Apple laptop with a hypervisor installed (e.g., VirtualBox, VMware, or Parallels).
+1. A laptop with a hypervisor installed (e.g., VirtualBox, VMware, or Parallels).
 2. Ubuntu 22.04.1 LTS ISO for creating the virtual machine.
 3. A router/firewall capable of setting up a DMZ.
 4. Basic knowledge of Linux, networking, and firewall configuration.
@@ -49,12 +49,3 @@ Below is a link to the logical diagram of the project. The diagram illustrates t
 - Monitor incoming traffic to the honeypot.
 - Analyze captured logs for malicious activity.
 - Use findings to improve network defense strategies.
-
-## Contributions
-Contributions are welcome! Please open an issue or submit a pull request with your ideas or improvements.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-## Contact
-For any questions or support, feel free to contact me at [your_email@example.com].
