@@ -1,32 +1,33 @@
 # Honeypot Project
 
-This repository contains the setup and configuration files for deploying a Cowrie honeypot on an Ubuntu 22.04.1 LTS virtual machine. The honeypot is isolated within a DMZ network to ensure a secure and robust deployment.
+This repository contains the setup and configuration files for deploying a Cowrie honeypot on an Ubuntu 22.04.1 LTS virtual machine. The honeypot is deployed on a Digital Ocean VPS to ensure a secure and robust setup.
 
 ## Project Overview
 The goal of this project is to simulate vulnerable services using Cowrie to collect and analyze malicious traffic. Logs from the honeypot are forwarded to a remote logging server for detailed monitoring and forensic analysis.
 
 ### Key Features
 - **Honeypot Framework:** Cowrie
-- **Platform:** Ubuntu 22.04.1 LTS (hosted on a VM)
-- **Network Isolation:** DMZ configuration
+- **Platform:** Ubuntu 22.04.1 LTS (hosted on a VPS)
+- **Network Deployment:** Digital Ocean VPS
 - **Log Management:** Remote logging server integration
 
 ## Setup Instructions
 
 ### Prerequisites
-1. A laptop with a hypervisor installed (e.g., VirtualBox, VMware, or Parallels).
-2. Ubuntu 22.04.1 LTS ISO for creating the virtual machine.
-3. A router/firewall capable of setting up a DMZ.
-4. Basic knowledge of Linux, networking, and firewall configuration.
+1. A Digital Ocean account for provisioning the VPS.
+2. Basic knowledge of Linux, networking, and firewall configuration.
+3. SSH client installed on your local machine for accessing the VPS.
 
 ### Installation Steps
-1. **Create the VM**
-   - Install and configure a hypervisor on your laptop.
-   - Create a new VM and install Ubuntu 22.04.1 LTS.
+1. **Provision the VPS**
+   - Log in to your Digital Ocean account.
+   - Create a new droplet using the Ubuntu 22.04.1 LTS image.
+   - Configure the droplet’s size and region based on your requirements.
 
 2. **Set Up Cowrie**
-   - Clone the Cowrie repository and follow the installation guide:
+   - SSH into the VPS and clone the Cowrie repository:
      ```bash
+     ssh root@<your-vps-ip>
      git clone https://github.com/cowrie/cowrie.git
      cd cowrie
      sudo ./install.sh
@@ -34,14 +35,14 @@ The goal of this project is to simulate vulnerable services using Cowrie to coll
    - Configure Cowrie to emulate desired services (e.g., SSH, Telnet).
 
 3. **Network Configuration**
-   - Assign the VM to the DMZ network (e.g., using VLANs or NAT with firewall rules).
-   - Configure the firewall to allow inbound traffic to Cowrie and restrict outbound traffic.
+   - Configure the VPS firewall using tools like `ufw` or Digital Ocean’s firewall settings.
+   - Allow inbound traffic to Cowrie-specific ports (e.g., SSH, Telnet) and block unnecessary outbound traffic.
 
 4. **Log Forwarding**
    - Set up remote logging using tools like syslog or ELK stack (Elasticsearch, Logstash, Kibana).
 
 ## Logical Diagram
-Below is a link to the logical diagram of the project. The diagram illustrates the network topology, including the Cowrie honeypot within the DMZ.
+Below is a link to the logical diagram of the project. The diagram illustrates the network topology, including the Cowrie honeypot on the Digital Ocean VPS.
 
 <img src="./media/logical_diagram.png" alt="Logical Diagram" width="300">
 
