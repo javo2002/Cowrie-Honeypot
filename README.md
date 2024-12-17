@@ -46,6 +46,11 @@ Below is a link to the logical diagram of the project. The diagram illustrates t
 
 <img src="./media/logical_diagram.png" alt="Logical Diagram" width="300">
 
+## Sequence Diagram
+Below is a link to a sequence diagram of the project. The diagram illustrates the flow of how Cowrie will analyze attackers actions to determine the goals of the attacker.
+
+<img src="./media/sequence_diagram.png" alt="Logical Diagram" width="300">
+
 ## Usage
 - Monitor incoming traffic to the honeypot.
 - Analyze captured logs for malicious activity.
